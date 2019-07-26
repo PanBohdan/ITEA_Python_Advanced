@@ -1,2 +1,7 @@
+<<<<<<< lesson2
 .idea/
-*.pyc
+__pycache__
+=======
+.idea
+__pycache__
+>>>>>>> master
