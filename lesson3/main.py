@@ -52,8 +52,8 @@ class Coords:
 
     def __neg__(self):
         new_x = self.get_x()*-1
-        new_y = self.get_x()*-1
-        new_z = self.get_x()*-1
+        new_y = self.get_y()*-1
+        new_z = self.get_z()*-1
         new_coords = Coords(new_x, new_y, new_z)
         return new_coords
 
