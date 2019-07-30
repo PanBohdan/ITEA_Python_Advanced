@@ -61,6 +61,7 @@ class Coords:
         return self._x, self._y, self._z
 
 
+# all tests here
 coords = Coords(1, 2, 3)
 other_coords = Coords(1, 2, 3)
 multiplied = coords * other_coords
