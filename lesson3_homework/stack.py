@@ -10,7 +10,8 @@ class Stack:
         if not len(self._values) == self._stack_size:
             self._values.insert(len(self._values), what_to_push)
         else:
-            raise Exception('stack overflow (there max number of objects in stack)')
+            raise Exception('stack overflow '
+                            '(there max number of objects in stack)')
 
     def pop(self):
         if not len(self._values) == 0:
@@ -27,7 +28,8 @@ class Stack:
     def swap(self):
         length = len(self._values)
         if not length < 2:
-            self._values[length-1], self._values[length-2] = self._values[length-2], self._values[length-1]
+            self._values[length-1], self._values[length-2] = \
+                self._values[length-2], self._values[length-1]
         else:
             pass
 
