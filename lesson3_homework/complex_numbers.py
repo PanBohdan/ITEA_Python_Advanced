@@ -35,8 +35,10 @@ class Complex:
 
     def __truediv__(self, other):
         try:
-            first_part = self._real * other.get_real() + self._imag * other.get_imag()
-            second_part = self._imag * other.get_real() - self._real * other.get_imag()
+            first_part = \
+                self._real * other.get_real()+self._imag * other.get_imag()
+            second_part = \
+                self._imag * other.get_real()-self._real * other.get_imag()
             sum_of_other_squared = other.get_real()**2 + other.get_imag()**2
             real = first_part / sum_of_other_squared
             imag = second_part / sum_of_other_squared
