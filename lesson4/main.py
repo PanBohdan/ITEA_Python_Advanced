@@ -26,7 +26,11 @@ class Person:
 
     @abstractmethod
     def get_age(self):
-        pass
+        today = date.today()
+        age = today.year - self._date_of_birth.year - \
+            ((today.month, today.day) < (self._date_of_birth.month,
+                                         self._date_of_birth.day))
+        return age
 
 
 class Abiturient(Person):
@@ -40,11 +44,7 @@ class Abiturient(Person):
         return self._surname+' is abiturient'
 
     def get_age(self):
-        today = date.today()
-        age = today.year - self._date_of_birth.year - \
-            ((today.month, today.day) < (self._date_of_birth.month,
-                                         self._date_of_birth.day))
-        return age
+        return super().get_age()
 
     def get_faculty(self):
         return self._faculty
@@ -62,11 +62,7 @@ class Student(Person):
         return self._surname+' is student'
 
     def get_age(self):
-        today = date.today()
-        age = today.year - self._date_of_birth.year - \
-            ((today.month, today.day) < (self._date_of_birth.month,
-                                         self._date_of_birth.day))
-        return age
+        return super().get_age()
 
     def get_faculty(self):
         return self._faculty
@@ -84,14 +80,11 @@ class Lecturer(Person):
         self._experience = experience
 
     def get_surname(self):
-        return self._surname+f" is lector with experience of {self.get_experience()}"
+        return self._surname+f" is lector with experience of " \
+                             f"{self.get_experience()}"
 
     def get_age(self):
-        today = date.today()
-        age = today.year - self._date_of_birth.year - \
-            ((today.month, today.day) < (self._date_of_birth.month,
-                                         self._date_of_birth.day))
-        return age
+        return super().get_age()
 
     def get_faculty(self):
         return self._faculty
@@ -102,7 +95,7 @@ class Lecturer(Person):
 
 list_of_persons = [Abiturient('Panko', date(2003, 1, 12),
                               'some faculty'),
-                   Lecturer('Lecturer surname', date(1988, 5, 6), 
+                   Lecturer('Lecturer surname', date(1988, 5, 6),
                             'other faculty', '5 years'),
                    Student('Student surname', date(2000, 2, 12),
                            'other faculty', 'some course'),
