@@ -42,7 +42,8 @@ class Abiturient(Person):
     def get_age(self):
         today = date.today()
         age = today.year - self._date_of_birth.year - \
-            ((today.month, today.day) < (self._date_of_birth.month, self._date_of_birth.day))
+            ((today.month, today.day) < (self._date_of_birth.month,
+                                         self._date_of_birth.day))
         return age
 
     def get_faculty(self):
@@ -63,7 +64,8 @@ class Student(Person):
     def get_age(self):
         today = date.today()
         age = today.year - self._date_of_birth.year - \
-            ((today.month, today.day) < (self._date_of_birth.month, self._date_of_birth.day))
+            ((today.month, today.day) < (self._date_of_birth.month,
+                                         self._date_of_birth.day))
         return age
 
     def get_faculty(self):
@@ -87,7 +89,8 @@ class Lecturer(Person):
     def get_age(self):
         today = date.today()
         age = today.year - self._date_of_birth.year - \
-            ((today.month, today.day) < (self._date_of_birth.month, self._date_of_birth.day))
+            ((today.month, today.day) < (self._date_of_birth.month,
+                                         self._date_of_birth.day))
         return age
 
     def get_faculty(self):
@@ -97,10 +100,14 @@ class Lecturer(Person):
         return self._experience
 
 
-list_of_persons = [Abiturient('Panko', date(2003, 1, 12), 'some faculty'),
-                   Lecturer('Lecturer surname', date(1988, 5, 6), 'other faculty', '5 years'),
-                   Student('Student surname', date(2000, 2, 12), 'other faculty', 'some course'),
-                   Lecturer('Other lecturer surname', date(1900, 4, 13), 'some faculty', 'many years')]
+list_of_persons = [Abiturient('Panko', date(2003, 1, 12),
+                              'some faculty'),
+                   Lecturer('Lecturer surname', date(1988, 5, 6), 
+                            'other faculty', '5 years'),
+                   Student('Student surname', date(2000, 2, 12),
+                           'other faculty', 'some course'),
+                   Lecturer('Other lecturer surname', date(1900, 4, 13),
+                            'some faculty', 'many years')]
 
 our_age = 25
 new_list = [x for x in list_of_persons if x.get_age() > our_age]
