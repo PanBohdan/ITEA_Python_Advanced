@@ -67,7 +67,7 @@ class Student(Person):
     def get_faculty(self):
         return self._faculty
 
-    def get_cource(self):
+    def get_course(self):
         return self._course
 
 
