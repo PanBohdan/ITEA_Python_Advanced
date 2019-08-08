@@ -14,7 +14,7 @@ class OurContextManager:
         self.object_we_are_working_with.close()
 
 
-def actual_decorator(func):
+def thread_decorator(func):
     def wrapper(url, filename, thread, daemon):
         t = Thread(target=func, args=(url, filename), name=thread, daemon=daemon)
         print(f"We are starting and working at {thread} with {url}")
@@ -23,7 +23,7 @@ def actual_decorator(func):
     return wrapper
 
 
-@actual_decorator
+@thread_decorator
 def download_from_url(url, filename):
     try:
         opener = urllib.request.urlopen(url)
