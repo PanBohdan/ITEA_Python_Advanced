@@ -32,7 +32,7 @@ class CustomList(object):
         self._my_custom_list = self._my_custom_list + [item]
 
     def insert(self, index, item):
-        s_l = self._my_custom_list # short_list
+        s_l = self._my_custom_list  # short_list
         self._my_custom_list = s_l[0: index] + [item] + s_l[index: len(s_l)]
 
     def remove(self, what_to_remove):
