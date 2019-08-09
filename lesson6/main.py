@@ -21,6 +21,7 @@ class CustomList(object):
             raise TypeError('Can add list only to a list')
 
     def get_list(self):
+        return self._my_custom_list
 
     def pop(self, index):
         tmp = self._my_custom_list[index]
