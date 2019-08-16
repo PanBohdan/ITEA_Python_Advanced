@@ -1,0 +1,5 @@
+admin login: admin
+admin password: adminpassword
+user login: user
+user password: password
+(Can add in users table of db or by registering)
