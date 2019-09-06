@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {
+        font-family: Arial;
+        margin: 0;
+        background: url(https://images.pexels.com/photos/953214/pexels-photo-953214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+    }
+    table{
+        padding: 5px;
+        background-color: white
+    }
+    .header {
+              padding: 1px;
+              color: white;
+              font-size: 30px;
+              background-color: black;
+     }
+    </style>
+    <div class="header">
+        <bold><b>Storage</b></bold>
+        <a style="float:right;" href="/">Back to the main page</a>
+    </div>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <center><table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>category</th>
+                <th>price</th>
+                <th>in stock</th>
+                <th>number of items</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+                <td>{{item[4]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table></center>
+</head>
+
+</body>
+</html>
