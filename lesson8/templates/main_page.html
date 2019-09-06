@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: url(https://images.pexels.com/photos/953214/pexels-photo-953214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+        }
+
+        .header {
+              padding: 1px;
+              color: white;
+              font-size: 30px;
+              background-color: black;
+        }
+        table{
+            padding: 5px;
+            background-color: white;
+        }
+
+    </style>
+    <div class="header">
+        <bold><b>Welcome to the shop</b></bold>
+        <a style="float:right;" href="info">Info</a>
+    </div>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <center><table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>info</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td><a href={{item[0]}}>{{item[1]}}</a></td>
+                <td>{{item[2]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table></center>
+</head>
+<body>
+
+</body>
+</html>

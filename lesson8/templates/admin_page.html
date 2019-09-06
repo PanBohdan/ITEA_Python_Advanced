@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+    <body>
+        <title>Admin page</title>
+        <p>{{popup}}</p>
+        <form action="/add_category" method="post">
+              name:<br>
+              <input type="text" name="name"><br>
+              description:<br>
+              <input type="text" name="description"><br><br>
+              <input type="submit" value="Submit">
+        </form><br><br>
+
+        <form action="/add_item" method="post">
+              name: <input type="text" name="name"><br><br>
+              price: <input type="number" name="price"><br><br>
+              in stock: <input type="checkbox" name="in_stock"><br><br>
+              {% for item in items %}
+              <input type="radio" name="options" id={{item[0]}} value={{item[0]}}> {{item[1]}} </input><br>
+              {% endfor %}
+              number of items:<input type="number" name="number_of_items"><br><br>
+              <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
