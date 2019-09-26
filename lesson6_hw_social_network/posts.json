@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5d8ccff4caeacd96f7da6c2c"},"user":{"$oid":"5d8ccd0da19523b34025c505"},"time":"26/09/2019 17:49:24","data":"post"}
+{"_id":{"$oid":"5d8cdf1a14d030cdd29ed911"},"user":{"$oid":"5d8cd66aa33fcb4790e4aed5"},"time":"26/09/2019 18:54:02","data":"Hello world"}

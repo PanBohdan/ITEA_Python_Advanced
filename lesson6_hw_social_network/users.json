@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5d8ccd0da19523b34025c505"},"username":"admin","password":"5f4dcc3b5aa765d61d8327deb882cf99","date_of_registration":"26/09/2019 17:37:01","admin":true,"super_admin":false}
+{"_id":{"$oid":"5d8cd639a33fcb4790e4aed4"},"username":"user","password":"ee11cbb19052e40b07aac0ca060c23ee","date_of_registration":"26/09/2019 18:16:09","admin":false,"super_admin":false}
+{"_id":{"$oid":"5d8cd66aa33fcb4790e4aed5"},"username":"cossack_ua","password":"17c4520f6cfd1ab53d8745e84681eb49","date_of_registration":"26/09/2019 18:16:58","admin":true,"super_admin":true}
